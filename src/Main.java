@@ -119,7 +119,7 @@ public class Main {
 
             if (retry.equalsIgnoreCase("t")){
                 status = false;
-                System.out.println("Terima kasih atas kunjungan anda... \n");
+                System.out.println("Terima kasih telah menggunakan aplikasi ini!\n");
             } else if (retry.equalsIgnoreCase("y")) {
                 status = true;
             } else {
