@@ -22,8 +22,8 @@ public class Main {
                                 count++;
                             }
                         }
-                        System.out.println("Jumlah nama yang dimasukkan adalah: " + count);
-                        System.out.println("Coba lagi, maksimal karakter nama adalah 25 karakter");
+                        System.out.println("Jumlah karakter yang dimasukkan adalah " + count + " karakter.");
+                        System.out.println("Coba lagi, maksimal karakter untuk nama adalah 25 karakter");
                         count = 0;
                     }
                 } catch (Exception e) {
@@ -34,15 +34,15 @@ public class Main {
             // loop using do while again to get user input
             // then validate the input to make sure its exactly 10 digits
             do {
-                System.out.print("Masukkan NIM (Harus 10 angka) : ");
+                System.out.print("Masukkan NIM (Harus 10 karakter) : ");
                 try {
                     userNIM = in.nextLine();
                     if (userNIM.length() > 10 || userNIM.length() < 10) {
                         for (int i = 0; i < userNIM.length(); i++) {
                             count++;
                         }
-                        System.out.println("Jumlah angka yang dimasukkan adalah: " + count);
-                        System.out.println("Coba lagi, masukkan NIM dengan jumlah 10 digit");
+                        System.out.println("Jumlah karakter yang dimasukkan adalah " + count + " karakter." );
+                        System.out.println("Coba lagi, masukkan NIM dengan 10 karakter");
                         count = 0;
                     }
                 } catch (Exception e) {
@@ -74,38 +74,44 @@ public class Main {
             // after taking userValue, output deret bilangan odd, even, and fibonacci sequence
             System.out.println("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
             System.out.println("Deret Bilangan");
-            System.out.println("###############");
+            System.out.println("###############\n");
 
             // start by declaring for bilangan genap the starting number is numEven = 2
             // then loop based on userValue, every sequence print numEven and adds 2 everytime
             System.out.println(userValue + " Bilangan Genap : ");
-            int numEven = 2;
+            int numEven = 2, sumEven = 0;
             for (int i = 1; i <= userValue; i++) {
                 System.out.print(numEven + " ");
+                sumEven += numEven;
                 numEven += 2;
             }
+            System.out.println("\nHasil penjumlahan = " + sumEven);
 
             // start by declaring for bilangan ganjil the starting number is numOdd = 1
             // then loop based on userValue, every sequence print numOdd and adds 2 everytime
             System.out.println("\n\n" + userValue + " Bilangan Ganjil : ");
-            int numOdd = 1;
+            int numOdd = 1, sumOdd = 0;
             for (int i = 1; i <= userValue; i++) {
                 System.out.print(numOdd + " ");
+                sumOdd += numOdd;
                 numOdd += 2;
             }
+            System.out.println("\nHasil penjumlahan = " + sumOdd);
 
             // basically fibonacci has 3 individual variable that needs to be checked
             // every loop we know that num3 is the result of num1 + num2
             // then after we calculate num3, num1 takes the value of num2, and num2 takes the value of num3
             System.out.println("\n\n" + userValue + " Bilangan Fibonacci : ");
-            int fibonacciNum1 = 0, fibonacciNum2 = 1, fibonacciNum3;
+            int fibonacciNum1 = 0, fibonacciNum2 = 1, fibonacciNum3, sumFibonacci = 1;
             System.out.print(fibonacciNum1 + " " + fibonacciNum2);
             for (int i = 2; i <= userValue; ++i) {
                 fibonacciNum3 = fibonacciNum1 + fibonacciNum2;
-                System.out.print(" " + fibonaccinum3);
+                sumFibonacci += fibonacciNum3;
+                System.out.print(" " + fibonacciNum3);
                 fibonacciNum1 = fibonacciNum2;
                 fibonacciNum2 = fibonacciNum3;
             }
+            System.out.println("\nHasil penjumlahan = " + sumFibonacci);
 
             // ask the user if they would like to retry the program
             System.out.print("\n\nApakah anda ingin mengulangi program?  [Y/T] ");
@@ -120,7 +126,6 @@ public class Main {
                 status = false;
             }
         }
-
 
     }
 }
