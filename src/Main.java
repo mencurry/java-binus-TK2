@@ -98,13 +98,13 @@ public class Main {
             // every loop we know that num3 is the result of num1 + num2
             // then after we calculate num3, num1 takes the value of num2, and num2 takes the value of num3
             System.out.println("\n\n" + userValue + " Bilangan Fibonacci : ");
-            int fibonacciNum1 = 0, fibonacciNum2 = 1, fibonaccinum3;
+            int fibonacciNum1 = 0, fibonacciNum2 = 1, fibonacciNum3;
             System.out.print(fibonacciNum1 + " " + fibonacciNum2);
             for (int i = 2; i <= userValue; ++i) {
-                fibonaccinum3 = fibonacciNum1 + fibonacciNum2;
+                fibonacciNum3 = fibonacciNum1 + fibonacciNum2;
                 System.out.print(" " + fibonaccinum3);
                 fibonacciNum1 = fibonacciNum2;
-                fibonacciNum2 = fibonaccinum3;
+                fibonacciNum2 = fibonacciNum3;
             }
 
             // ask the user if they would like to retry the program
